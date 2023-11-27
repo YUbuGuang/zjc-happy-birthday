@@ -34,6 +34,7 @@ const playBackgroundMusic = () => {
 
   const playButton = document.getElementById("playButton");
   playButton.style.display = "none"; // 隐藏按钮
+  animationTimeline().play(); // 播放动画
 };
 
 //替换1： 11.27 14：22
@@ -44,7 +45,7 @@ const playBackgroundMusic = () => {
 const playButton = document.getElementById("playButton");
 playButton.addEventListener("click", () => {
   playBackgroundMusic();
-  animationTimeline().play(); // 播放动画
+ //修改2：11.27 14：28上移使得动画与音乐一起开始 animationTimeline().play(); // 播放动画
 });
 
 
