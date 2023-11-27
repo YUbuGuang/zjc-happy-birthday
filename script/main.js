@@ -36,12 +36,23 @@ const playBackgroundMusic = () => {
   playButton.style.display = "none"; // 隐藏按钮
 };
 
+//替换1： 11.27 14：22
 // 将 playBackgroundMusic 函数附加到按钮点击事件
+//const playButton = document.getElementById("playButton");
+//playButton.addEventListener("click", playBackgroundMusic);
+
 const playButton = document.getElementById("playButton");
-playButton.addEventListener("click", playBackgroundMusic);
+playButton.addEventListener("click", () => {
+  playBackgroundMusic();
+  animationTimeline().play(); // 播放动画
+});
+
 
 // Animation Timeline
 const animationTimeline = () => {
+ // 设置动画容器可见
+ document.querySelector(".container").style.visibility = "visible";
+  
  // Spit chars that needs to be animated individually
  const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
  const hbd = document.getElementsByClassName("wish-hbd")[0];
