@@ -24,6 +24,25 @@ const fetchData = () => {
     });
 };
 
+  //修改位置
+  //顺序运行获取和动画
+  fetchData();
+
+  // 添加播放背景音乐的逻辑
+  const playBackgroundMusic = () => {
+    const audio = document.getElementById("backgroundAudio");
+    audio.play();
+
+    const playButton = document.getElementById("playButton");
+    playButton.style.display = "none"; // 隐藏按钮
+  };
+
+  // 将playBackgroundMusic函数附加到按钮点击事件
+  const playButton = document.getElementById("playButton");
+  playButton.addEventListener("click", playBackgroundMusic);
+};
+
+
 // Animation Timeline
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
