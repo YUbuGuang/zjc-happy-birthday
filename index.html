@@ -46,7 +46,20 @@
     Your browser does not support the audio element.
   </audio>
 	
+	
 <button id="playButton" onclick="playBackgroundMusic()">公主请按按钮</button>
+
+<script>
+    function playBackgroundMusic() {
+        var audio = document.getElementById("backgroundAudio");
+        audio.play();
+        
+        var playButton = document.getElementById("playButton");
+        playButton.style.display = "none"; // 隐藏按钮
+	    
+	startAnimationAndAudio(); // 添加这行来启动动画   
+    }
+</script>
 
 	
   <div class="container">
