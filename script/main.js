@@ -322,7 +322,7 @@ const animationTimeline = () => {
   // Restart Animation on click
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
-     animationTimeline();  //tl.restart();  微小修改  20：46 
+      tl.restart();  //微小修改  20：46 
   });
 };
 
