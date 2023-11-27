@@ -18,7 +18,7 @@ const fetchData = () => {
         // Check if the iteration is over
         // Run amimation if so
         if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
-          animationTimeline();
+          //animationTimeline();
         } 
       });
     });
@@ -300,6 +300,20 @@ const animationTimeline = () => {
   replyBtn.addEventListener("click", () => {
     tl.restart();
   });
+};
+
+// Function to play background music and start animation
+const playBackgroundMusic = () => {
+  var audio = document.getElementById("backgroundAudio");
+  audio.play();
+
+  // Call the animation timeline function after the music starts
+  audio.onplaying = function () {
+    animationTimeline();
+  };
+
+  var playButton = document.getElementById("playButton");
+  playButton.style.display = "none"; // Hide the button
 };
 
 // Run fetch and animation in sequence
