@@ -302,17 +302,5 @@ const animationTimeline = () => {
   });
 };
 
-// Function to play animation
-const playAnimation = () => {
-  // Call the animation timeline function
-  animationTimeline();
-
-  var playButton = document.getElementById("playButton");
-  playButton.style.display = "none"; // Hide the button
-};
-
 // Run fetch and animation in sequence
 fetchData();
-
-// Add event listener to the button to trigger animation
-document.getElementById("playButton").addEventListener("click", playAnimation);
