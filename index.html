@@ -18,22 +18,24 @@
     background-color: #f0f0f0;
   }
 
-  #playButton {
-    background-color: #ff69b4;
-    color: white;
-    padding: 10px 20px; /* 缩小按钮的内边距 */
-    font-size: 14px; /* 缩小字体大小 */
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    position: fixed;
-    bottom: 10px; /* 放置在底部 */
-    left: 10px; /* 放置在左边 */
-  }
+#playButton {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px; /* 调整按钮的内边距 */
+  font-size: 14px; /* 调整字体大小 */
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 50%; /* 改为50% */
+  left: 50%; /* 改为50% */
+  transform: translate(-50%, 50%); /* 居中按钮 */
+}
 
-  #playButton:hover {
-    background-color: #d35480;
-  }
+#playButton:hover {
+  background-color: #d35480;
+}
+
 </style>
 
 
