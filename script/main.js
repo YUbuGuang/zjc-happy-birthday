@@ -34,7 +34,11 @@ const playBackgroundMusic = () => {
 
   const playButton = document.getElementById("playButton");
   playButton.style.display = "none"; // 隐藏按钮
-  animationTimeline().play(); // 播放动画
+
+  // 等待音乐加载完毕后再开始动画
+  audio.addEventListener("canplaythrough", () => {
+    animationTimeline().play();
+  });
 };
 
 //替换1： 11.27 14：22
