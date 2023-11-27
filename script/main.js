@@ -1,3 +1,11 @@
+// 新增一个触发动画的按钮
+const startAnimationBtn = document.getElementById("startAnimationBtn");
+
+// 用户点击按钮时触发动画
+startAnimationBtn.addEventListener("click", () => {
+  fetchData();
+});
+
 // Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
