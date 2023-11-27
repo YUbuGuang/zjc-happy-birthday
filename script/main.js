@@ -83,13 +83,6 @@ const applyCustomData = async () => {
   }
 };
 
-// 启动动画和音乐
-const startAnimationAndAudio = async () => {
-  await applyCustomData();
-  playBackgroundAudio();
-  mainAnimation();
-};
-
 // 为开始按钮添加事件监听器
 const startButton = document.getElementById('playButton');
 startButton.addEventListener('click', startAnimationAndAudio);
