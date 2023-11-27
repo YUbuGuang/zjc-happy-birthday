@@ -294,13 +294,15 @@ document.addEventListener('DOMContentLoaded', () => {
           "+=1"
         );
         
-        return tl;
+     
 
           // Restart Animation on click
           const replyBtn = document.getElementById("replay");
           replyBtn.addEventListener("click", () => {
             tl.restart();
           });
+
+        return tl;
     };
 
     // 定义启动动画和音乐的函数
