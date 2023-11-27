@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Animation Timeline
     const animationTimeline = () => {
         // 这里是您最初的动画顺序代码，按照您的需求保持不变
-        const tl = new TimelineMax();
+        const tl = gsap.timeline(); 
 
             tl.from(".container", { duration: 0.1, autoAlpha: 0 })
             .from(".one", { duration: 0.7, opacity: 0, y: 10 })
