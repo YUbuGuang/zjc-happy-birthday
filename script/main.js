@@ -19,9 +19,27 @@ const fetchData = () => {
         // Run amimation if so
         if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
           animationTimeline();
-        } 
-      });
+          
+          // 在动画后添加重播按钮的事件侦听器
+        const replayBtn = document.getElementById("replay");
+        replayBtn.addEventListener("click", () => {
+          // 在此处触发播放音乐的功能
+          playMusic();
+          
+          // 重新开始动画
+          tl.restart();
+        });
+      }
     });
+};
+
+
+// 播放音乐的函数
+const playMusic = () => {
+  // 在这里添加播放音乐的逻辑
+  // 例如，你可以使用HTML5音频API
+  const audio = new Audio('path-to-your-audio-file.mp3');
+  audio.play();
 };
 
 // Animation Timeline
