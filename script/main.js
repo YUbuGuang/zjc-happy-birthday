@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         tl.to(".container", { duration: 0.1, autoAlpha: 1 })
           .from(".one", { duration: 0.7, opacity: 0, y: 10 })
-          .from(".two", { duration: 0.4, opacity: 0, y: 10 }, "-=0.3")
+          .from(".two", { duration: 1, opacity: 0, y: 10 }, "-=0.3")
           .to(".one", { duration: 0.7, opacity: 0, y: 10 }, "+=2.5")
           .to(".two", { duration: 0.7, opacity: 0, y: 10 }, "-=0.7")
           .from(".three", { duration: 0.7, opacity: 0, y: 10 })
