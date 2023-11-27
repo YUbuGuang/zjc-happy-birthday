@@ -1,9 +1,9 @@
-// Import the data to customize and insert them into page
+// Import the data to customize and insert them into the page
 const fetchData = () => {
   fetch("customize.json")
     .then(data => data.json())
     .then(data => {
-      dataArr = Object.keys(data);
+      const dataArr = Object.keys(data);
       dataArr.map(customData => {
         if (data[customData] !== "") {
           if (customData === "imagePath") {
@@ -16,46 +16,27 @@ const fetchData = () => {
         }
 
         // Check if the iteration is over
-        // Run amimation if so
-        if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
+        // Run animation if so
+        if (dataArr.length === dataArr.indexOf(customData) + 1) {
           animationTimeline();
-        } 
+        }
       });
     });
 };
 
-  //修改位置
-  //顺序运行获取和动画
-  fetchData();
-
-  // 添加播放背景音乐的逻辑
-  const playBackgroundMusic = () => {
-    const audio = document.getElementById("backgroundAudio");
-    audio.play();
-
-    const playButton = document.getElementById("playButton");
-    playButton.style.display = "none"; // 隐藏按钮
-  };
-
-  // 将playBackgroundMusic函数附加到按钮点击事件
-  const playButton = document.getElementById("playButton");
-  playButton.addEventListener("click", playBackgroundMusic);
-};
-
-
 // Animation Timeline
 const animationTimeline = () => {
-  // Spit chars that needs to be animated individually
+  // Spit chars that need to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
 
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
     .split("")
-    .join("</span><span>")}</span`;
+    .join("</span><span>")}</span>`;
 
   hbd.innerHTML = `<span>${hbd.innerHTML
     .split("")
-    .join("</span><span>")}</span`;
+    .join("</span><span>")}</span>`;
 
   const ideaTextTrans = {
     opacity: 0,
@@ -315,6 +296,7 @@ const animationTimeline = () => {
   // tl.timeScale(2);
 
   // Restart Animation on click
+
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     tl.restart();
@@ -324,5 +306,15 @@ const animationTimeline = () => {
 // Run fetch and animation in sequence
 fetchData();
 
-// 运行动画
-animationTimeline();
+// 添加播放背景音乐的逻辑
+const playBackgroundMusic = () => {
+  const audio = document.getElementById("backgroundAudio");
+  audio.play();
+
+  const playButton = document.getElementById("playButton");
+  playButton.style.display = "none"; // 隐藏按钮
+};
+
+// 将 playBackgroundMusic 函数附加到按钮点击事件
+const playButton = document.getElementById("playButton");
+playButton.addEventListener("click", playBackgroundMusic);
