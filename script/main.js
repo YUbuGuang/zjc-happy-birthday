@@ -309,8 +309,13 @@ document.addEventListener('DOMContentLoaded', () => {
     startButton.addEventListener('click', startAnimationAndAudio);
 
     // 如果需要重播动画的话，可以添加重播按钮的监听器
-    const replayButton = document.getElementById('replay');
-    replayButton.addEventListener('click', () => {
-        mainAnimation().restart();
+    //const replayButton = document.getElementById('replay');
+    //replayButton.addEventListener('click', () => {
+      //  mainAnimation().restart();
+    //});
+    const replyBtn = document.getElementById("replay");
+     replyBtn.addEventListener("click", () => {
+      tl.restart();
     });
+    
 });
