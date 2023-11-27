@@ -38,7 +38,7 @@ const fetchData = () => {
 const playMusic = () => {
   // 在这里添加播放音乐的逻辑
   // 例如，你可以使用HTML5音频API
-  const audio = new Audio('path-to-your-audio-file.mp3');
+  const audio = new Audio('有你在.mp3');
   audio.play();
 };
 
