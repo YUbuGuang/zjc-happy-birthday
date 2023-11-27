@@ -1,3 +1,27 @@
+// Function to start animation and audio
+const startAnimation = () => {
+  fetchData(); // Fetch data and start animation
+  playBackgroundAudio(); // Start playing background audio
+};
+
+// Event listener for the start button
+const startButton = document.getElementById("startButton");
+startButton.addEventListener("click", startAnimation);
+
+// Event listener for the custom button (assuming you've added a button with id "customButton")
+const customButton = document.getElementById("customButton");
+customButton.addEventListener("click", startAnimation);
+
+// Function to play background audio
+const playBackgroundAudio = () => {
+  const backgroundAudio = document.getElementById("backgroundAudio");
+  if (backgroundAudio.paused) {
+    backgroundAudio.play();
+  } else {
+    backgroundAudio.currentTime = 0;
+  }
+};
+
 // Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
@@ -298,7 +322,7 @@ const animationTimeline = () => {
   // Restart Animation on click
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
-    tl.restart();
+     animationTimeline();  //tl.restart();  微小修改  20：46 
   });
 };
 
