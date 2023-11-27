@@ -5,24 +5,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>周+×生日快乐!!! 😊🎂🎁🎊💋</title>
+  <title> 周+×生日快乐!!! 😊🎂🎁🎊💋</title>
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   <link rel="stylesheet" href="style/style.css">
-	
+  <style>
+  body {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  #playButton {
+    background-color: #ff69b4;
+    color: white;
+    padding: 20px 40px; /* 增大按钮的内边距 */
+    font-size: 20px; /* 增大字体大小 */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 居中按钮 */
+  }
+
+  #playButton:hover {
+    background-color: #d35480;
+  }
+  </style>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 </head>
 
 	
 <body>
-  <div class="start-button-container">
-    <button id="startButton">开始</button>
-  </div>
 	
 <audio id="backgroundAudio" loop>
     <source src="有你在.mp3" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
-
+	
+<button id="playButton" onclick="playBackgroundMusic()">公主请按按钮</button>
+<script>
+    function playBackgroundMusic() {
+        var audio = document.getElementById("backgroundAudio");
+        audio.play();
+        
+        var playButton = document.getElementById("playButton");
+        playButton.style.display = "none"; // 隐藏按钮
+    }
+</script>
 	
   <div class="container">
     <div class="one">
