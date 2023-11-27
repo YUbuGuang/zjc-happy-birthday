@@ -1,8 +1,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
-// 使用现代化的 GSAP 3.x
-gsap.registerPlugin(TimelineLite, TweenMax);
-
 // 主动画函数，包含所有动画细节
 const mainAnimation = () => {
   const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
