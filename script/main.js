@@ -295,6 +295,12 @@ document.addEventListener('DOMContentLoaded', () => {
         );
         
         return tl;
+
+          // Restart Animation on click
+          const replyBtn = document.getElementById("replay");
+          replyBtn.addEventListener("click", () => {
+            tl.restart();
+          });
     };
 
     // 定义启动动画和音乐的函数
@@ -313,9 +319,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //replayButton.addEventListener('click', () => {
       //  mainAnimation().restart();
     //});
-    const replyBtn = document.getElementById("replay");
-     replyBtn.addEventListener("click", () => {
-      tl.restart();
-    });
+    //const replyBtn = document.getElementById("replay");
+     //replyBtn.addEventListener("click", () => {
+      //tl.restart();
+    //});
     
 });
