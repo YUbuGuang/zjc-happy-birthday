@@ -42,6 +42,8 @@ const fetchData = () => {
   playButton.addEventListener("click", playBackgroundMusic);
 };
 
+// 运行动画
+animationTimeline();
 
 // Animation Timeline
 const animationTimeline = () => {
